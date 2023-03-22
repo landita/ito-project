@@ -1,0 +1,10 @@
+.image-container > figure > div > img {
+  height: 100vh !important;
+  filter: brightness(50%);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
