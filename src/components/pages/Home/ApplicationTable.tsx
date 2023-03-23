@@ -4,16 +4,12 @@ import ConfirmModal from './ConfirmModal';
 interface Props {
   curr: Applications;
 }
-
 const ApplicationTable = ({ curr }: Props) => {
   return (
     <tr>
       <td>{curr.medicalUnit}</td>
-      <td>{curr.medicalUnit}</td>
       <td>{curr.doctorName}</td>
       <td>{curr.medicalDiagnostic}</td>
-      <td>{curr.coverageDays}</td>
-      <td>{curr.coverageDays}</td>
       <td>{curr.coverageDays}</td>
       <td>
         <ConfirmModal

@@ -32,8 +32,8 @@ const ApplicationForm = () => {
   const form = useForm({
     initialValues: {
       medicalUnit: 'isss',
-      startDate: new Date(),
-      endDate: new Date(),
+      startDate: '',
+      endDate: '',
       doctorName: '',
       coverageDays: 0,
       medicalDiagnostic: '',

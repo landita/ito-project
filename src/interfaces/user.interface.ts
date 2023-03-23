@@ -5,14 +5,12 @@ interface UserSession {
   username?: string;
   role?: Roles;
   isActive?: boolean;
+  employeeId?: string;
 }
-
 interface User extends UserSession {
   id?: string;
   password: string;
-  employeeId?: string;
 }
-
 interface UserSessionStore {
   user?: UserSession;
   setSession: (session: UserSession) => void;

@@ -11,11 +11,11 @@ export const logIn = async (emailAddress: string, password: string) => {
     const response = await getDocs(
       query(collection(db, collectionName), where('email', '==', emailAddress)),
     );
-    const { username, email, role } = <UserSession>{
+    const { username, email, role, employeeId } = <UserSession>{
       ...response.docs[0].data(),
     };
     await signInWithEmailAndPassword(auth, emailAddress, password);
-    return { username, email, role };
+    return { username, email, role, employeeId };
   } catch (error) {
     throw new Error('bad request');
   }

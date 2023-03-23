@@ -1,4 +1,4 @@
-import { collection, getDocs, query } from 'firebase/firestore';
+import { collection, getDocs, query, doc, getDoc } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import { Employee } from '../interfaces';
 
@@ -11,4 +11,9 @@ export const getEmployees = async () => {
   } catch (error) {
     throw new Error('cannot load data');
   }
+};
+
+export const getEmployee = async (id: string) => {
+  const response = await getDoc(doc(db, collectionName, id));
+  return <Employee>response.data();
 };

@@ -10,6 +10,7 @@ const userStore = create<UserSessionStore>()(
           username: '',
           email: '',
           rol: '',
+          employeeId: '',
           isActive: false,
         },
         setSession: (session: UserSession) =>
